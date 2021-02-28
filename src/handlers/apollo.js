@@ -2,12 +2,12 @@ const { ApolloServer } = require('apollo-server-cloudflare')
 const { graphqlCloudflare } = require('apollo-server-cloudflare/dist/cloudflareApollo')
 
 const KVCache = require('../kv-cache')
-const PokemonAPI = require('../datasources/pokeapi')
+const auth0Profile = require('../datasources/auth0Profile')
 const resolvers = require('../resolvers')
 const typeDefs = require('../schema')
 
 const dataSources = () => ({
-  pokemonAPI: new PokemonAPI(),
+  auth0Profile: new auth0Profile(),
 })
 
 const kvCache = { cache: new KVCache() }

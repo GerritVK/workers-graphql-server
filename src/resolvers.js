@@ -1,7 +1,8 @@
+
 module.exports = {
   Query: {
-    pokemon: async (_source, { id }, { dataSources }) => {
-      return dataSources.pokemonAPI.getPokemon(id)
-    },
+    auth0: async (_source, { auth0_id }, { dataSources }) => {
+      return dataSources.auth0Profile.getProfileInfo(auth0_id)
+    }
   },
 }

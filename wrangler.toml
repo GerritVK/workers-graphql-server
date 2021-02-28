@@ -1,13 +1,11 @@
-name = "workers-graphql-server"
+name = "auth0-hasura-remote-schema"
 type = "webpack"
 zone_id = ""
-account_id = ""
+account_id = "b2b26bc1cb0556fea2488291aa1e4fa3"
 route = ""
 workers_dev = true
 webpack_config = "webpack.config.js"
 
-# Enable a kv-namespace to use the KV caching feature
-#
-# kv-namespaces = [
-#   { binding = "WORKERS_GRAPHQL_CACHE", id = "" }
-# ]
+kv_namespaces = [
+  { binding = "Auth0", preview_id = "c3df998834664673a6193bedbc8860f4", id = "e26bb3fc4cae4c4ca96a8c625f0918f2" }
+]
